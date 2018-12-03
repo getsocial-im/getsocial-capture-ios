@@ -1,0 +1,700 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		BCA380A820C02FFB00DE5EA2 /* GetSocialCaptureExport */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = BCA380AA20C02FFB00DE5EA2 /* Build configuration list for PBXAggregateTarget "GetSocialCaptureExport" */;
+			buildPhases = (
+				BCA380A920C02FFB00DE5EA2 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = GetSocialCaptureExport;
+			productName = GetSocialCaptureDocs;
+		};
+		BCD24469208F76A00049F9AC /* GetSocialCaptureDocs */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = BCD2446A208F76A00049F9AC /* Build configuration list for PBXAggregateTarget "GetSocialCaptureDocs" */;
+			buildPhases = (
+				BCD2446D208F76AB0049F9AC /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = GetSocialCaptureDocs;
+			productName = GetSocialCaptureDocs;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		BCA3801420AEF8A500DE5EA2 /* GetSocialCaptureInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = BCA3801220AEF8A500DE5EA2 /* GetSocialCaptureInternal.h */; };
+		BCA3801520AEF8A500DE5EA2 /* GetSocialCaptureInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3801320AEF8A500DE5EA2 /* GetSocialCaptureInternal.m */; };
+		BCA3801C20AF007400DE5EA2 /* GetSocialGIFGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = BCA3801A20AF007400DE5EA2 /* GetSocialGIFGenerator.h */; };
+		BCA3801D20AF007400DE5EA2 /* GetSocialGIFGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3801B20AF007400DE5EA2 /* GetSocialGIFGenerator.m */; };
+		BCA3802020AF00A100DE5EA2 /* GetSocialMediaGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = BCA3801E20AF00A100DE5EA2 /* GetSocialMediaGenerator.h */; };
+		BCA3802320AF06DF00DE5EA2 /* GetSocialMediaGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3802220AF06DF00DE5EA2 /* GetSocialMediaGenerator.m */; };
+		BCA3802620AF126600DE5EA2 /* GetSocialMP4GeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3802520AF126600DE5EA2 /* GetSocialMP4GeneratorTests.m */; };
+		BCA3802A20AF128000DE5EA2 /* facepalm-png in Resources */ = {isa = PBXBuildFile; fileRef = BCA3802820AF128000DE5EA2 /* facepalm-png */; };
+		BCA3802B20AF128000DE5EA2 /* facepalm.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BCA3802920AF128000DE5EA2 /* facepalm.mp4 */; };
+		BCA3802E20AF1DE700DE5EA2 /* pointing.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BCA3802C20AF1DE700DE5EA2 /* pointing.mp4 */; };
+		BCA3802F20AF1DE700DE5EA2 /* pointing-png in Resources */ = {isa = PBXBuildFile; fileRef = BCA3802D20AF1DE700DE5EA2 /* pointing-png */; };
+		BCA3803220AF231D00DE5EA2 /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3803120AF231D00DE5EA2 /* TestHelper.m */; };
+		BCA3803420AF23F000DE5EA2 /* GetSocialGIFGeneratorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3803320AF23F000DE5EA2 /* GetSocialGIFGeneratorTest.m */; };
+		BCA3803720BD886C00DE5EA2 /* libcompression.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BCA3803620BD886C00DE5EA2 /* libcompression.tbd */; };
+		BCA3803A20BD8EC800DE5EA2 /* NSData+Compression.h in Headers */ = {isa = PBXBuildFile; fileRef = BCA3803820BD8EC800DE5EA2 /* NSData+Compression.h */; };
+		BCA3803B20BD8EC800DE5EA2 /* NSData+Compression.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3803920BD8EC800DE5EA2 /* NSData+Compression.m */; };
+		BCA3809720BFF89000DE5EA2 /* UIImage+GIF.h in Headers */ = {isa = PBXBuildFile; fileRef = BCA3809520BFF89000DE5EA2 /* UIImage+GIF.h */; };
+		BCA3809820BFF89000DE5EA2 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3809620BFF89000DE5EA2 /* UIImage+GIF.m */; };
+		BCA380A020C0074700DE5EA2 /* GIFUIImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = BCA3809E20C0074700DE5EA2 /* GIFUIImageView.h */; };
+		BCA380A120C0074700DE5EA2 /* GIFUIImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA3809F20C0074700DE5EA2 /* GIFUIImageView.m */; };
+		BCD24449208F4AB30049F9AC /* GetSocialCapture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD2443F208F4AB20049F9AC /* GetSocialCapture.framework */; };
+		BCD2444E208F4AB30049F9AC /* GetSocialCaptureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD2444D208F4AB30049F9AC /* GetSocialCaptureTests.m */; };
+		BCD24450208F4AB30049F9AC /* GetSocialCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = BCD24442208F4AB20049F9AC /* GetSocialCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BCD2445C208F4D490049F9AC /* GetSocialCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD2445A208F4D490049F9AC /* GetSocialCapture.m */; };
+		BCD24467208F5C960049F9AC /* GetSocialCapturePreview.h in Headers */ = {isa = PBXBuildFile; fileRef = BCD24465208F5C960049F9AC /* GetSocialCapturePreview.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BCD24468208F5C960049F9AC /* GetSocialCapturePreview.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD24466208F5C960049F9AC /* GetSocialCapturePreview.m */; };
+		BCD244A72090D3700049F9AC /* NSMutableArray+Queue.h in Headers */ = {isa = PBXBuildFile; fileRef = BCD244A52090D3700049F9AC /* NSMutableArray+Queue.h */; };
+		BCD244A82090D3700049F9AC /* NSMutableArray+Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD244A62090D3700049F9AC /* NSMutableArray+Queue.m */; };
+		BCD244DC20AC42990049F9AC /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD244DB20AC42990049F9AC /* OpenGLES.framework */; };
+		BCD244E120AD836B0049F9AC /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD244E020AD836B0049F9AC /* AVKit.framework */; };
+		BCD244E820ADCCB60049F9AC /* GetSocialCapturePreview+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = BCD244E620ADCCB60049F9AC /* GetSocialCapturePreview+Internal.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BCD2444A208F4AB30049F9AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCD24436208F4AB20049F9AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCD2443E208F4AB20049F9AC;
+			remoteInfo = GetSocialCapture;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BCA3801220AEF8A500DE5EA2 /* GetSocialCaptureInternal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetSocialCaptureInternal.h; sourceTree = "<group>"; };
+		BCA3801320AEF8A500DE5EA2 /* GetSocialCaptureInternal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetSocialCaptureInternal.m; sourceTree = "<group>"; };
+		BCA3801A20AF007400DE5EA2 /* GetSocialGIFGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetSocialGIFGenerator.h; sourceTree = "<group>"; };
+		BCA3801B20AF007400DE5EA2 /* GetSocialGIFGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetSocialGIFGenerator.m; sourceTree = "<group>"; };
+		BCA3801E20AF00A100DE5EA2 /* GetSocialMediaGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetSocialMediaGenerator.h; sourceTree = "<group>"; };
+		BCA3802220AF06DF00DE5EA2 /* GetSocialMediaGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetSocialMediaGenerator.m; sourceTree = "<group>"; };
+		BCA3802520AF126600DE5EA2 /* GetSocialMP4GeneratorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetSocialMP4GeneratorTests.m; sourceTree = "<group>"; };
+		BCA3802820AF128000DE5EA2 /* facepalm-png */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "facepalm-png"; path = "../../../../../testmedia/facepalm-png"; sourceTree = "<group>"; };
+		BCA3802920AF128000DE5EA2 /* facepalm.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = facepalm.mp4; path = ../../../../../testmedia/facepalm.mp4; sourceTree = "<group>"; };
+		BCA3802C20AF1DE700DE5EA2 /* pointing.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = pointing.mp4; path = ../../../../../testmedia/pointing.mp4; sourceTree = "<group>"; };
+		BCA3802D20AF1DE700DE5EA2 /* pointing-png */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "pointing-png"; path = "../../../../../testmedia/pointing-png"; sourceTree = "<group>"; };
+		BCA3803020AF231D00DE5EA2 /* TestHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestHelper.h; sourceTree = "<group>"; };
+		BCA3803120AF231D00DE5EA2 /* TestHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestHelper.m; sourceTree = "<group>"; };
+		BCA3803320AF23F000DE5EA2 /* GetSocialGIFGeneratorTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetSocialGIFGeneratorTest.m; sourceTree = "<group>"; };
+		BCA3803620BD886C00DE5EA2 /* libcompression.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcompression.tbd; path = usr/lib/libcompression.tbd; sourceTree = SDKROOT; };
+		BCA3803820BD8EC800DE5EA2 /* NSData+Compression.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSData+Compression.h"; path = "GetSocialCapture/Internal/Utils/NSData+Compression.h"; sourceTree = SOURCE_ROOT; };
+		BCA3803920BD8EC800DE5EA2 /* NSData+Compression.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSData+Compression.m"; path = "GetSocialCapture/Internal/Utils/NSData+Compression.m"; sourceTree = SOURCE_ROOT; };
+		BCA3809520BFF89000DE5EA2 /* UIImage+GIF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
+		BCA3809620BFF89000DE5EA2 /* UIImage+GIF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
+		BCA3809E20C0074700DE5EA2 /* GIFUIImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIFUIImageView.h; sourceTree = "<group>"; };
+		BCA3809F20C0074700DE5EA2 /* GIFUIImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIFUIImageView.m; sourceTree = "<group>"; };
+		BCD2443F208F4AB20049F9AC /* GetSocialCapture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GetSocialCapture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCD24442208F4AB20049F9AC /* GetSocialCapture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetSocialCapture.h; sourceTree = "<group>"; };
+		BCD24443208F4AB20049F9AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCD24448208F4AB30049F9AC /* GetSocialCaptureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetSocialCaptureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCD2444D208F4AB30049F9AC /* GetSocialCaptureTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetSocialCaptureTests.m; sourceTree = "<group>"; };
+		BCD2444F208F4AB30049F9AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCD2445A208F4D490049F9AC /* GetSocialCapture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetSocialCapture.m; sourceTree = "<group>"; };
+		BCD24465208F5C960049F9AC /* GetSocialCapturePreview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetSocialCapturePreview.h; sourceTree = "<group>"; };
+		BCD24466208F5C960049F9AC /* GetSocialCapturePreview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetSocialCapturePreview.m; sourceTree = "<group>"; };
+		BCD244A52090D3700049F9AC /* NSMutableArray+Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+Queue.h"; path = "GetSocialCapture/Internal/Utils/NSMutableArray+Queue.h"; sourceTree = SOURCE_ROOT; };
+		BCD244A62090D3700049F9AC /* NSMutableArray+Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+Queue.m"; path = "GetSocialCapture/Internal/Utils/NSMutableArray+Queue.m"; sourceTree = SOURCE_ROOT; };
+		BCD244DB20AC42990049F9AC /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		BCD244E020AD836B0049F9AC /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		BCD244E620ADCCB60049F9AC /* GetSocialCapturePreview+Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GetSocialCapturePreview+Internal.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BCD2443B208F4AB20049F9AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCD244E120AD836B0049F9AC /* AVKit.framework in Frameworks */,
+				BCD244DC20AC42990049F9AC /* OpenGLES.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCD24445208F4AB30049F9AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCA3803720BD886C00DE5EA2 /* libcompression.tbd in Frameworks */,
+				BCD24449208F4AB30049F9AC /* GetSocialCapture.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BCA3801120AEF88800DE5EA2 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				BCD244A42090D35C0049F9AC /* Utils */,
+				BCA3803520AF2B1E00DE5EA2 /* Generators */,
+				BCA3801220AEF8A500DE5EA2 /* GetSocialCaptureInternal.h */,
+				BCA3801320AEF8A500DE5EA2 /* GetSocialCaptureInternal.m */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		BCA3802720AF126C00DE5EA2 /* TestMedia */ = {
+			isa = PBXGroup;
+			children = (
+				BCA3802D20AF1DE700DE5EA2 /* pointing-png */,
+				BCA3802C20AF1DE700DE5EA2 /* pointing.mp4 */,
+				BCA3802820AF128000DE5EA2 /* facepalm-png */,
+				BCA3802920AF128000DE5EA2 /* facepalm.mp4 */,
+			);
+			path = TestMedia;
+			sourceTree = "<group>";
+		};
+		BCA3803520AF2B1E00DE5EA2 /* Generators */ = {
+			isa = PBXGroup;
+			children = (
+				BCA3801A20AF007400DE5EA2 /* GetSocialGIFGenerator.h */,
+				BCA3801B20AF007400DE5EA2 /* GetSocialGIFGenerator.m */,
+				BCA3801E20AF00A100DE5EA2 /* GetSocialMediaGenerator.h */,
+				BCA3802220AF06DF00DE5EA2 /* GetSocialMediaGenerator.m */,
+			);
+			path = Generators;
+			sourceTree = "<group>";
+		};
+		BCD24435208F4AB20049F9AC = {
+			isa = PBXGroup;
+			children = (
+				BCD24441208F4AB20049F9AC /* GetSocialCapture */,
+				BCD2444C208F4AB30049F9AC /* GetSocialCaptureTests */,
+				BCD24440208F4AB20049F9AC /* Products */,
+				BCD244DA20AC42990049F9AC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BCD24440208F4AB20049F9AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCD2443F208F4AB20049F9AC /* GetSocialCapture.framework */,
+				BCD24448208F4AB30049F9AC /* GetSocialCaptureTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCD24441208F4AB20049F9AC /* GetSocialCapture */ = {
+			isa = PBXGroup;
+			children = (
+				BCA3801120AEF88800DE5EA2 /* Internal */,
+				BCD24442208F4AB20049F9AC /* GetSocialCapture.h */,
+				BCD2445A208F4D490049F9AC /* GetSocialCapture.m */,
+				BCD24465208F5C960049F9AC /* GetSocialCapturePreview.h */,
+				BCD244E620ADCCB60049F9AC /* GetSocialCapturePreview+Internal.h */,
+				BCD24466208F5C960049F9AC /* GetSocialCapturePreview.m */,
+				BCD24443208F4AB20049F9AC /* Info.plist */,
+			);
+			path = GetSocialCapture;
+			sourceTree = "<group>";
+		};
+		BCD2444C208F4AB30049F9AC /* GetSocialCaptureTests */ = {
+			isa = PBXGroup;
+			children = (
+				BCA3802720AF126C00DE5EA2 /* TestMedia */,
+				BCD2444D208F4AB30049F9AC /* GetSocialCaptureTests.m */,
+				BCA3802520AF126600DE5EA2 /* GetSocialMP4GeneratorTests.m */,
+				BCA3803320AF23F000DE5EA2 /* GetSocialGIFGeneratorTest.m */,
+				BCD2444F208F4AB30049F9AC /* Info.plist */,
+				BCA3803020AF231D00DE5EA2 /* TestHelper.h */,
+				BCA3803120AF231D00DE5EA2 /* TestHelper.m */,
+			);
+			path = GetSocialCaptureTests;
+			sourceTree = "<group>";
+		};
+		BCD244A42090D35C0049F9AC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BCD244A52090D3700049F9AC /* NSMutableArray+Queue.h */,
+				BCD244A62090D3700049F9AC /* NSMutableArray+Queue.m */,
+				BCA3803820BD8EC800DE5EA2 /* NSData+Compression.h */,
+				BCA3803920BD8EC800DE5EA2 /* NSData+Compression.m */,
+				BCA3809520BFF89000DE5EA2 /* UIImage+GIF.h */,
+				BCA3809620BFF89000DE5EA2 /* UIImage+GIF.m */,
+				BCA3809E20C0074700DE5EA2 /* GIFUIImageView.h */,
+				BCA3809F20C0074700DE5EA2 /* GIFUIImageView.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BCD244DA20AC42990049F9AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BCA3803620BD886C00DE5EA2 /* libcompression.tbd */,
+				BCD244E020AD836B0049F9AC /* AVKit.framework */,
+				BCD244DB20AC42990049F9AC /* OpenGLES.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		BCD2443C208F4AB20049F9AC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCA380A020C0074700DE5EA2 /* GIFUIImageView.h in Headers */,
+				BCA3801C20AF007400DE5EA2 /* GetSocialGIFGenerator.h in Headers */,
+				BCD24450208F4AB30049F9AC /* GetSocialCapture.h in Headers */,
+				BCA3809720BFF89000DE5EA2 /* UIImage+GIF.h in Headers */,
+				BCA3802020AF00A100DE5EA2 /* GetSocialMediaGenerator.h in Headers */,
+				BCD24467208F5C960049F9AC /* GetSocialCapturePreview.h in Headers */,
+				BCA3801420AEF8A500DE5EA2 /* GetSocialCaptureInternal.h in Headers */,
+				BCD244E820ADCCB60049F9AC /* GetSocialCapturePreview+Internal.h in Headers */,
+				BCD244A72090D3700049F9AC /* NSMutableArray+Queue.h in Headers */,
+				BCA3803A20BD8EC800DE5EA2 /* NSData+Compression.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		BCD2443E208F4AB20049F9AC /* GetSocialCapture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCD24453208F4AB30049F9AC /* Build configuration list for PBXNativeTarget "GetSocialCapture" */;
+			buildPhases = (
+				BCD2443A208F4AB20049F9AC /* Sources */,
+				BCD2443B208F4AB20049F9AC /* Frameworks */,
+				BCD2443C208F4AB20049F9AC /* Headers */,
+				BCD2443D208F4AB20049F9AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GetSocialCapture;
+			productName = GetSocialCapture;
+			productReference = BCD2443F208F4AB20049F9AC /* GetSocialCapture.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BCD24447208F4AB30049F9AC /* GetSocialCaptureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCD24456208F4AB30049F9AC /* Build configuration list for PBXNativeTarget "GetSocialCaptureTests" */;
+			buildPhases = (
+				BCD24444208F4AB30049F9AC /* Sources */,
+				BCD24445208F4AB30049F9AC /* Frameworks */,
+				BCD24446208F4AB30049F9AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCD2444B208F4AB30049F9AC /* PBXTargetDependency */,
+			);
+			name = GetSocialCaptureTests;
+			productName = GetSocialCaptureTests;
+			productReference = BCD24448208F4AB30049F9AC /* GetSocialCaptureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BCD24436208F4AB20049F9AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = GetSocial;
+				TargetAttributes = {
+					BCA380A820C02FFB00DE5EA2 = {
+						ProvisioningStyle = Automatic;
+					};
+					BCD2443E208F4AB20049F9AC = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					BCD24447208F4AB30049F9AC = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					BCD24469208F76A00049F9AC = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BCD24439208F4AB20049F9AC /* Build configuration list for PBXProject "GetSocialCapture" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BCD24435208F4AB20049F9AC;
+			productRefGroup = BCD24440208F4AB20049F9AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BCD2443E208F4AB20049F9AC /* GetSocialCapture */,
+				BCD24447208F4AB30049F9AC /* GetSocialCaptureTests */,
+				BCD24469208F76A00049F9AC /* GetSocialCaptureDocs */,
+				BCA380A820C02FFB00DE5EA2 /* GetSocialCaptureExport */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BCD2443D208F4AB20049F9AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCD24446208F4AB30049F9AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCA3802B20AF128000DE5EA2 /* facepalm.mp4 in Resources */,
+				BCA3802A20AF128000DE5EA2 /* facepalm-png in Resources */,
+				BCA3802F20AF1DE700DE5EA2 /* pointing-png in Resources */,
+				BCA3802E20AF1DE700DE5EA2 /* pointing.mp4 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BCA380A920C02FFB00DE5EA2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PROJECT_DIR}/../../scripts/generate_framework.sh";
+		};
+		BCD2446D208F76AB0049F9AC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PROJECT_DIR}/../../scripts/generate_framework_docs.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BCD2443A208F4AB20049F9AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCA3809820BFF89000DE5EA2 /* UIImage+GIF.m in Sources */,
+				BCA3802320AF06DF00DE5EA2 /* GetSocialMediaGenerator.m in Sources */,
+				BCA380A120C0074700DE5EA2 /* GIFUIImageView.m in Sources */,
+				BCA3801520AEF8A500DE5EA2 /* GetSocialCaptureInternal.m in Sources */,
+				BCD24468208F5C960049F9AC /* GetSocialCapturePreview.m in Sources */,
+				BCD244A82090D3700049F9AC /* NSMutableArray+Queue.m in Sources */,
+				BCA3801D20AF007400DE5EA2 /* GetSocialGIFGenerator.m in Sources */,
+				BCD2445C208F4D490049F9AC /* GetSocialCapture.m in Sources */,
+				BCA3803B20BD8EC800DE5EA2 /* NSData+Compression.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCD24444208F4AB30049F9AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCA3803220AF231D00DE5EA2 /* TestHelper.m in Sources */,
+				BCD2444E208F4AB30049F9AC /* GetSocialCaptureTests.m in Sources */,
+				BCA3803420AF23F000DE5EA2 /* GetSocialGIFGeneratorTest.m in Sources */,
+				BCA3802620AF126600DE5EA2 /* GetSocialMP4GeneratorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BCD2444B208F4AB30049F9AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCD2443E208F4AB20049F9AC /* GetSocialCapture */;
+			targetProxy = BCD2444A208F4AB30049F9AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BCA380AB20C02FFB00DE5EA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MPDNQL6523;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BCA380AC20C02FFB00DE5EA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MPDNQL6523;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BCD24451208F4AB30049F9AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BCD24452208F4AB30049F9AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BCD24454208F4AB30049F9AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MPDNQL6523;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GetSocialCapture/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = im.getsocial.GetSocialCapture;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BCD24455208F4AB30049F9AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MPDNQL6523;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GetSocialCapture/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = im.getsocial.GetSocialCapture;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BCD24457208F4AB30049F9AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MPDNQL6523;
+				INFOPLIST_FILE = GetSocialCaptureTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = im.getsocial.GetSocialCaptureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BCD24458208F4AB30049F9AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MPDNQL6523;
+				INFOPLIST_FILE = GetSocialCaptureTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = im.getsocial.GetSocialCaptureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BCD2446B208F76A00049F9AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MPDNQL6523;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BCD2446C208F76A00049F9AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MPDNQL6523;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BCA380AA20C02FFB00DE5EA2 /* Build configuration list for PBXAggregateTarget "GetSocialCaptureExport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCA380AB20C02FFB00DE5EA2 /* Debug */,
+				BCA380AC20C02FFB00DE5EA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCD24439208F4AB20049F9AC /* Build configuration list for PBXProject "GetSocialCapture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCD24451208F4AB30049F9AC /* Debug */,
+				BCD24452208F4AB30049F9AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCD24453208F4AB30049F9AC /* Build configuration list for PBXNativeTarget "GetSocialCapture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCD24454208F4AB30049F9AC /* Debug */,
+				BCD24455208F4AB30049F9AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCD24456208F4AB30049F9AC /* Build configuration list for PBXNativeTarget "GetSocialCaptureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCD24457208F4AB30049F9AC /* Debug */,
+				BCD24458208F4AB30049F9AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCD2446A208F76A00049F9AC /* Build configuration list for PBXAggregateTarget "GetSocialCaptureDocs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCD2446B208F76A00049F9AC /* Debug */,
+				BCD2446C208F76A00049F9AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BCD24436208F4AB20049F9AC /* Project object */;
+}

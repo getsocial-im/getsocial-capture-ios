@@ -1,0 +1,6 @@
+framework module GetSocialCapture {
+  umbrella header "GetSocialCapture.h"
+
+  export *
+  module * { export * }
+}
