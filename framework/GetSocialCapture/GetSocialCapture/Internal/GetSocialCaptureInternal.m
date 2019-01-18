@@ -22,8 +22,16 @@
 #import "GetSocialGIFGenerator.h"
 #import "GetSocialCaptureInternal.h"
 #import "NSData+Compression.h"
+#import <MetalKit/MetalKit.h>
+#import <SpriteKit/SpriteKit.h>
 
 @interface GetSocialCaptureInternal()
+
+typedef NS_ENUM(NSInteger, GetSocialCaptureGameEngine) {
+    SpriteKit = 0,
+    MetalKit = 1,
+    Basic = 2
+};
 
 @property (nonatomic) UIView* contentView;
 @property (nonatomic) NSTimer* captureTimer;
@@ -33,6 +41,7 @@
 @property (nonatomic) int captureWidth;
 @property (nonatomic) int captureHeight;
 @property (nonatomic) CGSize captureSize;
+@property (nonatomic) GetSocialCaptureGameEngine gameEngine;
 
 @end
 
@@ -60,6 +69,8 @@
     self.captureWidth = view.bounds.size.width / 2;
     self.captureHeight = view.bounds.size.height / 2;
     self.captureSize = CGSizeMake(self.captureWidth, self.captureHeight);
+
+    self.gameEngine = [self detectGameEngine];
 
     [self startCapturing];
 }
@@ -90,6 +101,7 @@
     [mediaGenerator generateFile:self.generatedFileURL withFrames:self.capturedFrames size:CGSizeMake(self.captureWidth, self.captureHeight) result:^(void) {
         CaptureLog(@"Generated file: %@", self.generatedFileURL);
         result([NSData dataWithContentsOfURL:self.generatedFileURL]);
+        self.capturedFrames = [NSMutableArray new];
     }];
 }
 
@@ -137,17 +149,84 @@
 }
 
 - (void) createScreenshot {
-    CGRect screenshotRect = CGRectMake(0, 0, self.captureWidth, self.captureHeight);
+    CGImageRef imageRef = nil;
+    switch (self.gameEngine) {
+        case MetalKit:
+            imageRef = [self createScreenshotUsingMetalKit];
+            break;
+        case SpriteKit:
+            imageRef = [self createScreenshotUsingSpriteKit];
+            break;
+        case Basic:
+            imageRef = [self createDefaultScreenshot];
+            break;
+        default:
+            break;
+    }
+    UIImage *capturedImage = [UIImage imageWithCGImage:imageRef];
+    CFRelease(imageRef);
+    [self storeCapturedScreenshot:capturedImage];
+}
+
+- (CGImageRef) createScreenshotUsingSpriteKit {
+    SKView* view = self.contentView.subviews[0];
+    SKNode* node = view.scene;
+    SKTexture* texture = [view textureFromNode:node];
+    return texture.CGImage;
+}
+
+- (CGImageRef) createScreenshotUsingMetalKit {
+#if !TARGET_OS_SIMULATOR
+    MTKView* view = (MTKView*)self.contentView;
+    // set framebufferOnly to No to be able to create screenshot
+    view.framebufferOnly = NO;
+    id<MTLTexture> texture = [view currentDrawable].texture;
+    CIImage* ciImage = [CIImage imageWithMTLTexture:texture options:nil];
     
-    UIGraphicsBeginImageContextWithOptions(self.captureSize, YES, 0.0);
+    // resize image
+    CIFilter* filter = [CIFilter filterWithName:@"CILanczosScaleTransform"];
+    [filter setValue:ciImage forKey:@"inputImage"];
+    [filter setValue:[NSNumber numberWithDouble:0.5] forKey:@"inputScale"];
+    [filter setValue:[NSNumber numberWithDouble:1.0] forKey:@"inputAspectRatio"];
+    CIImage* resizedImage = (CIImage*)[filter valueForKey:@"outputImage"];
+    CIContext* ciContext = [CIContext new];
+    return [ciContext createCGImage:resizedImage fromRect:resizedImage.extent];
+#else
+    return nil;
+#endif
+}
+
+- (CGImageRef) createDefaultScreenshot {
+    CGRect screenshotRect = CGRectMake(0, 0, self.contentView.bounds.size.width, self.contentView.bounds.size.height);
+    
+    UIGraphicsBeginImageContextWithOptions(self.contentView.bounds.size, YES, 0.0);
     
     [self.contentView drawViewHierarchyInRect:screenshotRect afterScreenUpdates: NO];
     
     UIImage *capturedImage = UIGraphicsGetImageFromCurrentImageContext();
-
+    
     UIGraphicsEndImageContext();
     
-    [self storeCapturedScreenshot:capturedImage];
+    return capturedImage.CGImage;
+}
+
+- (GetSocialCaptureGameEngine) detectGameEngine {
+    if ([[self.contentView class] isSubclassOfClass:[MTKView class]]) {
+        CaptureLog(@"Game engine is MetalKit");
+        return MetalKit;
+    }
+    if ([[self.contentView class] isKindOfClass:[SKView class]]) {
+        CaptureLog(@"Game engine is SpriteKit");
+        return SpriteKit;
+    }
+    for (id subview in self.contentView.subviews) {
+        if ([[subview class] isSubclassOfClass:[SKView class]]) {
+            CaptureLog(@"Game Engine is SpriteKit");
+            return SpriteKit;
+        }
+    }
+    CaptureLog(@"Unknown Game Engine, fallback to basic capture method.");
+    return Basic;
 }
 
 - (void) storeCapturedScreenshot: (UIImage*) capturedScreenshot {

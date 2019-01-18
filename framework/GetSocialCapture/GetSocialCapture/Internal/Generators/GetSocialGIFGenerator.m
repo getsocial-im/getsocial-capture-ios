@@ -22,7 +22,13 @@
 @implementation GetSocialGIFGenerator
 
 - (void) generateFile:(NSURL*)filePath withFrames:(NSMutableArray*)capturedFrames size:(CGSize)size result:(void (^)(void))result {
-    [self generateGIFFile:(NSURL*)filePath withFrames:capturedFrames size:size result:result];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        [self generateGIFFile:(NSURL*)filePath withFrames:capturedFrames size:size result:^{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                result();
+            });
+        }];
+    });
 }
 
 #pragma mark - File Generation
